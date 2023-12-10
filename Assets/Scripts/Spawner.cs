@@ -7,15 +7,15 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject[] _targets;
     [SerializeField] private float _spawnTime;
 
-    private Point[] _points;
+    private SpawnPoint[] _points;
 
     private void Awake()
     {
-        _points = gameObject.GetComponentsInChildren<Point>();
+        _points = gameObject.GetComponentsInChildren<SpawnPoint>();
 
         for (int i = 0; i < _targets.Length && i < _points.Length; i++)
         {
-            _points[i].SetTemplate(_templates[Random.Range(0, _templates.Length)]);
+            _points[i].SetTemplate(_templates[i]);
             _points[i].SetTarget(_targets[i]);
         }
     }

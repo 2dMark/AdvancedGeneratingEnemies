@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Point : MonoBehaviour
+public class SpawnPoint : MonoBehaviour
 {
     private Enemy _template;
     private GameObject _target;

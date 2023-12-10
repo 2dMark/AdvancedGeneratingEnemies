@@ -14,5 +14,5 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public GameObject SetTarget(GameObject target) => _target = target;
+    public void SetTarget(GameObject target) => _target = target;
 }
